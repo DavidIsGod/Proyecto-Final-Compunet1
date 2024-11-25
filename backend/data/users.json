@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "username": "1081274892",
+    "password": "$2a$10$z1dS02L1K1N0cQVOnp2idOts1X2zMbasKLpndHKVU9zgo46e0e9Ja",
+    "role": "client"
+  },
+  {
+    "id": 2,
+    "username": "alex_dev",
+    "password": "$2a$10$Zc/TRG1Uyv6r7Ibo.uGm6OzipYd1FjuqY9btF/TNvXTK9DOhc06P2",
+    "role": "client"
+  },
+  {
+    "id": 3,
+    "username": "Emiliano73",
+    "password": "$2a$10$fdunlS9kP80soUYC0nW7GOcatJYwqLhpbu8UAai8ge3CfMEDw/MnW",
+    "role": "client"
+  },
+  {
+    "id": 4,
+    "username": "DavidIsGod",
+    "password": "$2a$10$LfGsC3OMYL/d4QLBvJViXudoF9mg4jHikOkCuDQOb07nbr0jWgeQ.",
+    "role": "client"
+  },
+  {
+    "id": 5,
+    "username": "Juana053",
+    "password": "$2a$10$h7cV8gICjeHEhyHPJEcYtOry7..6vYtOb.9fztqJhaStP1/IIAUI6",
+    "role": "client"
+  },
+  {
+    "id": 6,
+    "username": "Emiliano69",
+    "password": "$2a$10$JhEdYlSHvNkIsciBQnQzBeSxY4zPoiJtayCqDBHhHEzTvYL5Z7CjK",
+    "role": "client"
+  },
+  {
+    "id": 7,
+    "username": "DavidFreelancer69",
+    "password": "$2a$10$Sh1lkMaFmR3GgWvSQtEUcu2Fo8AUQR1aQjDYFIz1TuuNMMCjE2oLi",
+    "role": "client"
+  },
+  {
+    "id": 8,
+    "username": "ALEJO DEVELOPER",
+    "password": "$2a$10$Ppsp9MhxKGMbOKkoVpDjY.DsdFqCfWFoJsS9LmkvzL8YsfcCH70ee",
+    "role": "client"
+  },
+  {
+    "id": 9,
+    "username": "1081274892345",
+    "password": "$2a$10$UyCaggm46bqo8fX51RTKUu8CqSte6heSlx3pX4.HSfP9e50H1C/ny",
+    "role": "client"
+  },
+  {
+    "id": 10,
+    "username": "reboll",
+    "password": "$2a$10$S1ySkhgsQpx11WiEU2L0ROqCvnNVvy8BXJwOGKU.IWxX0xh1cOvcG",
+    "role": "client"
+  },
+  {
+    "id": 11,
+    "username": "DavidFreelancer333",
+    "password": "$2a$10$1sfma8KHbclrMUHfzNRyCuVtrsx5KbMCctu8l2ZSOvctxeBjyGNnS",
+    "role": "client"
+  },
+  {
+    "id": 12,
+    "username": "Davidelgodsito",
+    "password": "$2a$10$cHnZQqN/3dFiTn2rw1P73.y6QzYsZDnW5kp6x14LVKXEFJC8Bg38m",
+    "role": "client"
+  },
+  {
+    "id": 13,
+    "username": "davidnuevo",
+    "password": "$2a$10$eIMe6pvdhpJtSpSoQSTtSON.RvdOenuMWlaeN2sDuBTkXU5cXSfcu",
+    "role": "client"
+  },
+  {
+    "id": 14,
+    "username": "nuevonuevo",
+    "password": "$2a$10$sJbyMJOU5a/mVRFsuU4IqeT.oSbK5dOHXMVotBn7BC6uWhETlCXHW",
+    "role": "client"
+  },
+  {
+    "id": 15,
+    "username": "demo",
+    "password": "$2a$10$8my.vrF6GYZYNtUVJlsJJuMDV8O6JhwwGyPVTZid9YDYRDABgW8iK",
+    "role": "client"
+  },
+  {
+    "id": 16,
+    "username": "demo123",
+    "password": "$2a$10$gohUkTH278bqOquT.0hi3OwaXSafxe7xWxdqPx43pVOyhwi7lmHHe",
+    "role": "client"
+  },
+  {
+    "id": 17,
+    "username": "demonue",
+    "password": "$2a$10$ChakdTtJ6iO9kKbx2/jWEutMOIWSxn78UQ3.VrRMoNyJAoOlSkc2W",
+    "role": "client"
+  },
+  {
+    "id": 18,
+    "username": "clientenew",
+    "password": "$2a$10$qqtlHXFcI0SkMQ1Vnovf1OnYUyxTAaYF599E7.o6cXH6wK.bMZgFC",
+    "role": "client"
+  },
+  {
+    "id": 19,
+    "username": "demo45",
+    "password": "$2a$10$zpEk8WBStow9k/F8h47ECe0z59Q3sTfu2UgMny3txQwtrB/yobTne",
+    "role": "client"
+  },
+  {
+    "id": 20,
+    "username": "admin",
+    "password": "$2a$10$lRVKYaUB66i4F4RExmH.Sud9xJOyWi4V4MUUEBmWLmPXVZv2Wu7rK",
+    "role": "admin"
+  }
+]

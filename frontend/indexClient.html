@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda Web</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100%;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            height: 100%;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            padding: 20px;
+            color: #ecf0f1;
+        }
+        .sidebar h2 {
+            color: #3498db;
+            margin-bottom: 30px;
+            font-size: 24px;
+            text-align: center;
+        }
+        .sidebar nav {
+            display: flex;
+            flex-direction: column;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+        .menu-item:hover, .menu-item.active {
+            background-color: #34495e;
+            color: #3498db;
+        }
+        .menu-item i {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .header h1 {
+            color: #2c3e50;
+            font-size: 28px;
+        }
+        .search-bar input {
+            padding: 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            width: 300px;
+            font-size: 16px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        .product-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            transition: box-shadow 0.3s;
+            background-color: #fff;
+        }
+        .product-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .product-card img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .product-card h3 {
+            color: #2c3e50;
+            margin: 10px 0;
+        }
+        .product-card p {
+            color: #3498db;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .add-to-cart {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .add-to-cart:hover {
+            background-color: #27ae60;
+        }
+        .cart-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .cart-sidebar {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+            transition: right 0.3s ease;
+            z-index: 1001;
+        }
+        .cart-sidebar.visible {
+            right: 0;
+        }
+        .cart-header {
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .cart-items {
+            padding: 20px;
+            max-height: calc(100% - 200px);
+            overflow-y: auto;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .cart-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .cart-total {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-top: 1px solid #e0e0e0;
+        }
+        .checkout-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .checkout-btn:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Mi Tienda</h2>
+            <nav>
+                <a href="#" class="menu-item active">
+                    <i>🏠</i>
+                    <span>Inicio</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <i>🛍️</i>
+                    <span>Categorías</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <i>❤️</i>
+                    <span>Favoritos</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <i>📦</i>
+                    <span>Mis Pedidos</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <i>👤</i>
+                    <span>Mi Cuenta</span>
+                </a>
+                <a href="login.html" class="menu-item">
+                    <i>🚪</i>
+                    <span>Cerrar Sesión</span>
+                </a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <button class="cart-toggle">🛒 Ver Carrito</button>
+            <header class="header">
+                <h1>Productos Destacados</h1>
+                <div class="search-bar">
+                    <input type="search" placeholder="Buscar productos...">
+                </div>
+            </header>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Producto 1">
+                    <h3>Producto 1</h3>
+                    <p>$19.99</p>
+                    <button class="add-to-cart">Agregar al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Producto 2">
+                    <h3>Producto 2</h3>
+                    <p>$24.99</p>
+                    <button class="add-to-cart">Agregar al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Producto 3">
+                    <h3>Producto 3</h3>
+                    <p>$14.99</p>
+                    <button class="add-to-cart">Agregar al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200" alt="Producto 4">
+                    <h3>Producto 4</h3>
+                    <p>$29.99</p>
+                    <button class="add-to-cart">Agregar al Carrito</button>
+                </div>
+            </div>
+        </main>
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h2>Carrito de Compras</h2>
+            </div>
+            <div class="cart-items">
+                <!-- Los items del carrito se agregarán aquí dinámicamente -->
+            </div>
+            <div class="cart-total">
+                <h3>Total: $<span id="cart-total">0.00</span></h3>
+                <button class="checkout-btn">Proceder al Pago</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

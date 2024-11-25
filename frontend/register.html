@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <h1>Registro de Usuario</h1>
+    <form id="register-form">
+        <label for="username">Usuario:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Contraseña:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="role">Rol:</label><br>
+        <select id="role" name="role" required>
+            <option value="client">Cliente</option>
+            <option value="admin">Administrador</option>
+        </select><br><br>
+
+        <button type="submit">Registrar</button>
+    </form>
+
+    <p id="response-message"></p>
+
+    <script src="js/register.js"></script>
+</body>
+</html>
